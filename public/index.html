@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BackUp</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+
+  <body>
+    <div class="center">
+      <div>
+        <div class="login-box">
+          <h2>Login</h2>
+          <form action="" method="get">
+            <div class="user-box">
+              <input type="text" name="user" />
+              <label>Username</label>
+            </div>
+            <div class="user-box">
+              <input type="password" name="password" />
+              <label>Password</label>
+            </div>
+            <input type="submit" value="Save" />
+            <a href="#">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Submit
+            </a>
+          </form>
+        </div>
+
+        <div class="popup" onclick="myFunction()">
+          <p class="btn">Подсказка!</p>
+          <span class="popuptext" id="myPopup"
+            >Блин блинский я забыл отключить в своем текстовом редакторе, автоматическое создание
+            backup файлов, надеюсь это не вызовет никаких рисков для моего index.php</span
+          >
+        </div>
+      </div>
+    </div>
+    <script>
+      // When the user clicks on <div>, open the popup
+      function myFunction() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>

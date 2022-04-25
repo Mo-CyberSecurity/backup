@@ -1,11 +1,19 @@
 const express = require("express"),
-  app = express();
+  app = express(),
+  path = require("path");
 
 const port = process.env.YOUR_PORT || process.env.PORT || 8080;
+const flag = "flag{stop_h4te_me}"
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/" + "index.html");
+  if (req.url === "/?user=suck_and_suck&password=i_love_backup") {
+    res.send(flag);
+  } else {
+    res.sendFile(__dirname + "/public/" + "index.html");
+  }
 });
+
+app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/index.php~", (req, res) => {
   res.download(__dirname + "/" + "index.php_");
