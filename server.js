@@ -6,7 +6,7 @@ const port = process.env.YOUR_PORT || process.env.PORT || 8080;
 const flag = "flag{stop_h4te_me}"
 
 app.get("/", (req, res) => {
-  if (req.url === "/?user=suck_and_suck&password=i_love_backup") {
+  if (req.url === "/?user=tOPuSerName&password=topPassWORd") {
     res.send(flag);
   } else {
     res.sendFile(__dirname + "/public/" + "index.html");
